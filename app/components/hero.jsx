@@ -4,8 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useRef } from 'react';
 
-const HeroSection = () => {
-
+const HeroSection = ({ featureRef }) => {
     const imageRef = useRef(null);
 
     useEffect(() => {
@@ -25,6 +24,11 @@ const HeroSection = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, [])
+
+    const scrollToFeatures = () => {
+        featureRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
         <section className='w-full pt-36 md:pt-48 lg:pt-20 xl:pt-29 pb-10'>
             <div className='container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12 text-center'>
@@ -36,10 +40,8 @@ const HeroSection = () => {
                         An AI-driven platform to make your college and career easier and organized. We provide you with a one-stop destination for all your needs!
                     </p>
                     <p className='mx-auto max-w-[600] text-muted-foreground md:text-xl mt-2 text-lg'>Click on start to get to know us.</p>
-                    <div className='mt-6 mx-auto max-w-[600]'>
-                        <Link href='/dashboard'>
-                            <Button size='lg' className='px-8'>Get Started</Button>
-                        </Link>
+                    <div className='mt-6 mx-auto max-w-[600]'>     
+                        <Button size='lg' className='px-8' onClick={scrollToFeatures}>Get Started</Button>
                     </div>
                 </div>
 
