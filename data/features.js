@@ -2,15 +2,26 @@ import { BrainCircuit, Briefcase, LineChart, ScrollText } from "lucide-react";
 
 export const features = [
   {
-    title: "COLLEGE",
+    icon: <BrainCircuit className="w-10 h-10 mb-4 text-primary" />,
+    title: "AI-Powered Career Guidance",
     description:
-      "Our features will help you in all those things that te college doesn't help you in. From study plans to topic explanations, all will be taken care of.",
-    link: "/study-prep",
+      "Get personalized career advice and insights powered by advanced AI technology.",
   },
   {
-    title: "CAREER",
+    icon: <Briefcase className="w-10 h-10 mb-4 text-primary" />,
+    title: "Interview Preparation",
     description:
-      "Create a resume from scratch can be time consuming. We will help you by creating an AI generated resume according to your skills.",
-    link: "/resume",
+      "Practice with role-specific questions and get instant feedback to improve your performance.",
+  },
+  {
+    icon: <LineChart className="w-10 h-10 mb-4 text-primary" />,
+    title: "Industry Insights",
+    description:
+      "Stay ahead with real-time industry trends, salary data, and market analysis.",
+  },
+  {
+    icon: <ScrollText className="w-10 h-10 mb-4 text-primary" />,
+    title: "Smart Resume Creation",
+    description: "Generate ATS-optimized resumes with AI assistance.",
   },
 ];
