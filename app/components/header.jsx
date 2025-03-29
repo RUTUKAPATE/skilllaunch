@@ -31,9 +31,9 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem>
-                  <Link href={'/study-prep'} className='flex items-center gap-2'>
+                  <Link href={'/interview-prep'} className='flex items-center gap-2'>
                     <GraduationCap className='h-4 w-4' />
-                    <span>Study Prep</span>
+                    <span>Interview Prep</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
