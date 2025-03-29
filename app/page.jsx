@@ -12,7 +12,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <div className="grid-dark-background light:grid-light-background"></div>
 
       <HeroSection />
@@ -164,6 +164,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

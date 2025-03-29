@@ -2,10 +2,11 @@
 
 import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
+import { generateAIInsights } from "./dashboard";
 
 export async function updateUser(data) {
     const { userId } = await auth();
-    if(!userId) throw new Error("Unauthorized");
+    if (!userId) throw new Error("Unauthorized");
 
     const user = await db.user.findUnique({
         where: {
@@ -17,29 +18,25 @@ export async function updateUser(data) {
 
     try {
         const result = await db.$transaction(
-            async (tx)=> {
+            async (tx) => {
                 // find if the industry exits
                 let industryInsight = await tx.industryInsight.findUnique({
                     where: {
                         industry: data.industry,
                     },
                 });
-                // if industry doesn't exist, create it with default values - will replace it with ai later
+                // If industry doesn't exist, create it with default values
                 if (!industryInsight) {
-                    const insights = await tx.industryInsight.create({
+                    const insights = await generateAIInsights(data.industry);
+
+                    industryInsight = await db.industryInsight.create({
                         data: {
                             industry: data.industry,
-                            salaryRanges: [], //Default empty array
-                            growthRate: 0, // Default value
-                            demandLevel: "MEDIUM", //Default value
-                            topSkills: [], //Default empty array
-                            marketOutlook: "NEUTRAL", //Default empty array
-                            keyTrends: [], // Default empty array
-                            recommendedSkills: [], //Default empty array
-                            nextUpdate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 1 week for now
+                            ...insights,
+                            nextUpdate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), //Page Updates after a week
                         },
                     });
-                  }
+                }
 
                 //  update the user
                 const updatedUser = await tx.user.update({
@@ -68,9 +65,9 @@ export async function updateUser(data) {
     }
 }
 
-export async function getUserOnboardingStatus(){
+export async function getUserOnboardingStatus() {
     const { userId } = await auth();
-    if(!userId) throw new Error("Unauthorized");
+    if (!userId) throw new Error("Unauthorized");
 
     const user = await db.user.findUnique({
         where: {
