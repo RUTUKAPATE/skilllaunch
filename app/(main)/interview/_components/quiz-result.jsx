@@ -7,8 +7,9 @@ import React from 'react'
 const QuizResult = ({ result, hideStartNew = false, onStartNew }) => {
     if (!result) return null;
   return (
-    <div className='mx-auto'>
-        <h1 className='flex items-center gap-2 text-3xl bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2'>
+    <div className='mx-auto space-y-4'>
+        <h1 className='flex items-center gap-2 text-3xl bg-gradient-to-b from-gray-800 via-gray-600 to-gray-900 
+    dark:from-gray-400 dark:via-gray-200 dark:to-gray-600 font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2'>
             <Trophy className='h-6 w-6 text-yellow-500'/>
             Quiz Result
         </h1>

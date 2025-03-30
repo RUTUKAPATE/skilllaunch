@@ -13,7 +13,7 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
     <>
-      <div className="grid-dark-background light:grid-light-background"></div>
+      <div className="grid-background"></div>
 
       <HeroSection />
 
@@ -152,7 +152,8 @@ export default function Home() {
       </section>
 
       <section className="w-full">
-        <div className="bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 mx-auto py-24 rounded-lg">
+        <div className="bg-gradient-to-b from-gray-800 via-gray-600 to-gray-900 
+    dark:from-gray-400 dark:via-gray-200 dark:to-gray-600 mx-auto py-24">
           <div className="flex flex-col items-center justify-center space-y-4 text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl">
               Ready to Accelerate Your Career?
