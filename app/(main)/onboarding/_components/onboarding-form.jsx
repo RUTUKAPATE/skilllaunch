@@ -64,7 +64,8 @@ const OnboardingForm = ({ industries }) => {
     <div className='flex items-center justify-center bg-background'>
       <Card className="w-full max-w-lg mt-10 mx-2">
         <CardHeader>
-          <CardTitle className='bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 ont-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2 text-4xl'>Complete Your Profile</CardTitle>
+          <CardTitle className='bg-gradient-to-b from-gray-800 via-gray-600 to-gray-900 
+    dark:from-gray-400 dark:via-gray-200 dark:to-gray-600 ont-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2 text-4xl'>Complete Your Profile</CardTitle>
           <CardDescription>Select your industry to get personalized carrer insights and recommendations.</CardDescription>
         </CardHeader>
         <CardContent>

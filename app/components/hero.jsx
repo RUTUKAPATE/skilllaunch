@@ -4,10 +4,11 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className='w-full pt-36 md:pt-48 pb-10'>
+    <section className='w-full pt-36 md:pt-48 pb-20'>
       <div className='space-y-6 text-center'>
         <div className='space-y-6 mx-auto'>
-          <h1 className='text-5xl md:text-6xl lg:text-7xl xl:text-8xl gradient-title animate-gradient font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 pb-2 pr-2'>Your AI Career Coach for
+          <h1 className='text-5xl md:text-6xl lg:text-7xl xl:text-8xl animate-gradient font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-gray-800 via-gray-600 to-gray-900 
+    dark:from-gray-400 dark:via-gray-200 dark:to-gray-600 pb-2 pr-2 '>Your AI Career Coach for
             <br />
             Professional Success
           </h1>

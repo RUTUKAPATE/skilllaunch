@@ -23,7 +23,8 @@ const PerformanceChart = ({ assessments }) => {
     <div>
       <Card>
         <CardHeader>
-          <CardTitle className="bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2 text-3xl md:text-4xl">Performance Trend</CardTitle>
+          <CardTitle className="bg-gradient-to-b from-gray-800 via-gray-600 to-gray-900 
+    dark:from-gray-400 dark:via-gray-200 dark:to-gray-600 font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2 text-3xl md:text-4xl">Performance Trend</CardTitle>
           <CardDescription>Your quiz scores over time</CardDescription>
         </CardHeader>
         <CardContent>
