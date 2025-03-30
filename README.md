@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SkillLaunch - AI Career Guide
 
-## Getting Started
+## Overview
 
-First, run the development server:
+**SkillLaunch** is an AI-driven career guide built using **Next.js** and **React**. It provides users with career insights, interview preparation tools, AI-powered resume building, and interactive onboarding experiences. This project showcases advanced full-stack development skills, making it a strong addition to any developer's portfolio.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- **User Authentication**: Secure login and sign-up with Clerk Authentication.
+- **AI-Powered Insights**: Leverages the Gemini API to provide AI-generated industry insights.
+- **Interview Preparation**: Generates mock interview questions and evaluates performance stats.
+- **Resume Builder**: Allows users to create and download markdown-based resumes as PDFs.
+- **Database Management**: Utilizes NeonDB with Prisma for efficient data storage.
+- **Task Automation**: Integrates Inngest for scheduled functions like weekly insights.
+- **Modern UI Components**: Built with Tailwind CSS and Shadcn UI for a sleek design.
+
+## Tech Stack
+
+- **Frontend**: Next.js, React, Tailwind CSS, Shadcn UI
+- **Backend**: Next.js API routes, Prisma ORM
+- **Database**: NeonDB
+- **Authentication**: Clerk
+- **AI Integration**: Gemini API
+- **Task Automation**: Inngest
+- **Deployment**: Vercel
+
+## Installation
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js
+- npm / yarn / pnpm
+
+### Setup
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/fullstack-skilllaunch.git
+   cd fullstack-skilllaunch
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install  # or yarn install or pnpm install
+   ```
+
+3. **Set up environment variables:**
+   - Create a `.env` file in the root directory.
+   - Add the necessary API keys and database connection strings.
+
+4. **Run the development server:**
+   ```sh
+   npm run dev  # or yarn dev or pnpm dev
+   ```
+
+5. Open **http://localhost:3000** in your browser to view the app.
+
+## Project Structure
+
+The project follows a well-organized directory structure:
+
+```
+SKILLLAUNCH
+│── .next/
+│── actions/
+│── app/
+│── components/
+│── data/
+│── hooks/
+│── lib/
+│── node_modules/
+│── prisma/
+│── public/
+│── .env
+│── .gitignore
+│── components.json
+│── eslint.config.mjs
+│── jsconfig.json
+│── middleware.js
+│── next.config.mjs
+│── package-lock.json
+│── package.json
+│── postcss.config.mjs
+│── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This project can be deployed on **Vercel**:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push your code to **GitHub**.
+2. Link the repository to **Vercel**.
+3. Configure environment variables on **Vercel**.
+4. Deploy with a single click.
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! To contribute:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository.
+2. Create a feature branch:
+   ```sh
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```sh
+   git commit -m "Add new feature"
+   ```
+4. Push to the branch:
+   ```sh
+   git push origin feature-name
+   ```
+5. Open a pull request.
