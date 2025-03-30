@@ -44,7 +44,7 @@ const PerformanceChart = ({ assessments }) => {
                   }
                   return null;
                 }} />
-                <Line type="monotone" dataKey="score" stroke="white" strokeWidth={2} />
+                <Line type="monotone" dataKey="score" stroke="var(--line-color)" strokeWidth={2} />
               </LineChart>
             </ResponsiveContainer>
           </div>
