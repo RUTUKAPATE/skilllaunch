@@ -9,7 +9,7 @@ export default async function EditCoverLetterPage({ params }) {
   const coverLetter = await getCoverLetter(id);
 
   return (
-    <div className="container mx-auto py-6">
+    <div className="container mx-auto px-6">
       <div className="flex flex-col space-y-2">
         <Link href="/ai-cover-letter">
           <Button variant="link" className="gap-2 pl-0">
@@ -18,7 +18,8 @@ export default async function EditCoverLetterPage({ params }) {
           </Button>
         </Link>
 
-        <h1 className="text-6xl font-bold gradient-title mb-6">
+        <h1 className="text-6xl bg-gradient-to-b from-gray-800 via-gray-600 to-gray-900 
+    dark:from-gray-400 dark:via-gray-200 dark:to-gray-600 font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2">
           {coverLetter?.jobTitle} at {coverLetter?.companyName}
         </h1>
       </div>

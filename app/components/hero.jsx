@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className='space-y-6 text-center'>
         <div className='space-y-6 mx-auto'>
           <h1 className='text-5xl md:text-6xl lg:text-7xl xl:text-8xl animate-gradient font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-gray-800 via-gray-600 to-gray-900 
-    dark:from-gray-400 dark:via-gray-200 dark:to-gray-600 pb-2 pr-2 '>Your AI Career Coach for
+    dark:from-gray-400 dark:via-gray-200 dark:to-gray-600 pb-2 pr-2 '>Your AI Career Guide for
             <br />
             Professional Success
           </h1>
